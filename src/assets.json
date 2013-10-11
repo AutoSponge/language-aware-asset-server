@@ -1,0 +1,10 @@
+{
+    "sample": {
+        "type": "image/jpeg",
+        "unmatched": "en",
+        "availableLanguages": {
+            "en": "./src/ninja-cat-en.jpg",
+            "es": "./src/gato-ninja-es.jpg"
+        }
+    }
+}

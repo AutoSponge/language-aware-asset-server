@@ -1,0 +1,10 @@
+{
+    "test": {
+        "type": "text/plain",
+        "unmatched": "en",
+        "availableLanguages": {
+            "en": "test/english.txt",
+            "es": "test/spanish.txt"
+        }
+    }
+}
