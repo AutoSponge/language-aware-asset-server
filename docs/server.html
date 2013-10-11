@@ -326,6 +326,8 @@ returns {boolean}</p>
             
             <div class="content"><div class='highlight'><pre><span class="function"><span class="keyword">function</span> <span class="title">startServer</span><span class="params">(config)</span> {</span>
 
+    <span class="keyword">var</span> assets = require( config.assets );
+
     http.createServer( <span class="keyword">function</span>(req, res) {</pre></div></div>
             
         </li>
@@ -345,7 +347,7 @@ return &quot;File not found.&quot; message.</p>
             <div class="content"><div class='highlight'><pre>        maybe( [serveAsset, errorNotFound]
             .map( applyWith )
             .map( bind( slice( arguments )
-                .concat( findAsset( req, require( config.assets ) ) ) ) ) );
+                .concat( findAsset( req, assets ) ) ) ) );
 
     } ).listen( config.port, config.host );
 

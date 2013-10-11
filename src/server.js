@@ -141,6 +141,8 @@ function serveAsset (req, res, asset) {
 // Create our server based on the config provided.
 function startServer(config) {
 
+    var assets = require( config.assets );
+
     http.createServer( function(req, res) {
 
         // We will serve an asset or
@@ -148,7 +150,7 @@ function startServer(config) {
         maybe( [serveAsset, errorNotFound]
             .map( applyWith )
             .map( bind( slice( arguments )
-                .concat( findAsset( req, require( config.assets ) ) ) ) ) );
+                .concat( findAsset( req, assets ) ) ) ) );
 
     } ).listen( config.port, config.host );
 
